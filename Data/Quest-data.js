@@ -101,3 +101,11 @@ const school = {
         currency: 15
     }]
 };
+
+const quests = [
+    convenienceStore,
+    burgerWorld,
+    school,
+];
+
+export default quests;
