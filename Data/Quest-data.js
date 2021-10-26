@@ -1,5 +1,5 @@
 const convenienceStore = {
-    id: 'convenience store',
+    id: 'convenience-store',
     title: 'Loitering at the store',
     image: '',
     description: `
