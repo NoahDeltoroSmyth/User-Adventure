@@ -70,7 +70,7 @@ const burgerWorld = {
 
 const school = {
     id: 'school',
-    title: 'It is a school day',
+    title: 'School Day',
     image: '',
     description: `
         You are at school, but you hate that you have to be there. You envision a plan to get out of there, but principal McVicker
