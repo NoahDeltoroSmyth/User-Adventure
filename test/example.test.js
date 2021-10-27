@@ -78,9 +78,9 @@ test('findById should locate id', (expect) => {
     const expected = {
         id: 'convenience-store',
         title: 'Loitering at the store',
-        image: '',
+        image: '../assets/convenience-store-quest.jpeg',
         description: `
-        There you are chillin outside the convenience store and Todd shows up in his car. 
+        There you are chillin' outside the convenience store and Todd shows up in his car. 
         He sees you eating some nachos and orders you to give them to him or he will beat you up. 
         What do you do?`,
         choices: [{
