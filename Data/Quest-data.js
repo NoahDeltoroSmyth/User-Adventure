@@ -1,9 +1,9 @@
 const convenienceStore = {
     id: 'convenience-store',
     title: 'Loitering at the store',
-    image: '../assets/beavis.jpg',
+    image: '../assets/convenience-store-quest.jpeg',
     description: `
-        There you are chillin outside the convenience store and Todd shows up in his car. 
+        There you are chillin' outside the convenience store and Todd shows up in his car. 
         He sees you eating some nachos and orders you to give them to him or he will beat you up. 
         What do you do?`,
     choices: [{
@@ -36,7 +36,7 @@ const convenienceStore = {
 const burgerWorld = {
     id: 'burger-world',
     title: 'Burger World',
-    image: '',
+    image: '../assets/burger-world-quest.jpeg',
     description: `
         You get a call from your manager and he says that they are slammed and need extra help on the floor.
         He asks if you can come in right now for an extra 10 dollars and a free meal, but this means you would have
@@ -71,7 +71,7 @@ const burgerWorld = {
 const school = {
     id: 'school',
     title: 'School Day',
-    image: '',
+    image: '../assets/school-quest.jpeg',
     description: `
         You are at school, but you hate that you have to be there. You envision a plan to get out of there, but principal McVicker
         is guarding the front doors. What should you do?`,
@@ -95,7 +95,7 @@ const school = {
         id: 'back-doors',
         description: 'Sneak out the back doors',
         result: `
-            You envision a plan to get out the back doors. Only thing is Van Driessen is in the hall and it might be difficult to get by.
+            You envision a plan to get out the back doors when he isn't looking. Only thing is Van Driessen is in the hall and it might be difficult to get by.
             Lucky for you he isn't really paying attention and you are able to get out of school and you find some money on the way.`,
         hp: 25,
         currency: 15
