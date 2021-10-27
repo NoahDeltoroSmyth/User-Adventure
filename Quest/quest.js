@@ -1,5 +1,5 @@
 import quests from '../Data/Quest-data.js';
-import { findById, getUser } from '../Utils.js';
+import { findById, getUser, setUser } from '../Utils.js';
 
 const params = new URLSearchParams(window.location.search);
 
@@ -49,5 +49,6 @@ choices.addEventListener('submit', (e)=> {
     const user = getUser();
     console.log(user, 'user');
     
-
+    setUser(user);
+    console.log(user);
 });

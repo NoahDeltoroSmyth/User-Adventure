@@ -1,6 +1,6 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
-import { generateUser, setUser, getUser, findById } from '../Utils.js';
+import { generateUser, setUser, getUser, findById, scoreQuest } from '../Utils.js';
 import quests from '../Data/Quest-data.js';
 const test = QUnit.test;
 
@@ -113,5 +113,37 @@ test('findById should locate id', (expect) => {
     const actual = findById(quests, 'convenience-store');
 
     expect.deepEqual(actual, expected);
+
+});
+
+test('scoreQuest should update users gold, hp, and completed', (expect)=> {
+    //setup
+    const user = {
+        completed: {},
+        character: 'Beavis',
+        name: 'Noah',
+        hp: 100,
+        currency: 50,
+    };
+
+    const choice = {
+        id: 'give-in',
+        description: 'Give the nachos to Todd',
+        result: `
+        Todd throws them on the ground because he didn't even want them in the first place. 
+        He also still ends up beating you up and peels out on the nachos leaving you in a big plume of smoke.`,
+        hp: -40,
+        currency: -5
+    };
+
+    const questId = 'convenience-store';
+
+    //act
+    scoreQuest(choice, questId, user);
+
+    //expect
+    expect.equal(user.hp, 60);
+    expect.equal(user.currency, 45);
+    expect.equal(user.completed[questId], true);
 
 });

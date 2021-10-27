@@ -25,3 +25,9 @@ export function findById(items, id) {
         }
     }
 }
+
+export function scoreQuest(choice, questId, user) {
+    user.hp += choice.hp;
+    user.currency += choice.currency;
+    user.completed[questId] = true;
+}
