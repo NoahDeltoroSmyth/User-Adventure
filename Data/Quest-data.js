@@ -1,7 +1,7 @@
 const convenienceStore = {
     id: 'convenience-store',
     title: 'Loitering at the store',
-    image: '',
+    image: '../assets/beavis.jpg',
     description: `
         There you are chillin outside the convenience store and Todd shows up in his car. 
         He sees you eating some nachos and orders you to give them to him or he will beat you up. 
@@ -92,11 +92,11 @@ const school = {
         hp: -15,
         currency: 0
     }, {
-        id: 'make-alternate-plan',
-        description: 'Make an alternative plan',
+        id: 'back-doors',
+        description: 'Sneak out the back doors',
         result: `
             You envision a plan to get out the back doors. Only thing is Van Driessen is in the hall and it might be difficult to get by.
-            Lucky for you he isn't really paying attention and you are able to get out of school and find some money on the way.`,
+            Lucky for you he isn't really paying attention and you are able to get out of school and you find some money on the way.`,
         hp: 25,
         currency: 15
     }]
