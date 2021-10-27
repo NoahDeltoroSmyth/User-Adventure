@@ -1,3 +1,18 @@
-img {
-    width: 800px;
+body {
+    background-image: url(../assets/for-map.jpeg);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-repeat: repeat-y;
+    
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
+#quest-links {
+    display: flex;
+    flex-direction: column;
 }

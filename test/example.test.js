@@ -1,6 +1,6 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
-import { generateUser, setUser, getUser, findById, scoreQuest } from '../Utils.js';
+import { generateUser, setUser, getUser, findById, scoreQuest, loadProfile } from '../Utils.js';
 import quests from '../Data/Quest-data.js';
 const test = QUnit.test;
 
@@ -116,7 +116,7 @@ test('findById should locate id', (expect) => {
 
 });
 
-test('scoreQuest should update users gold, hp, and completed', (expect)=> {
+test('scoreQuest should update users currency, hp, and completed', (expect)=> {
     //setup
     const user = {
         completed: {},
@@ -145,5 +145,9 @@ test('scoreQuest should update users gold, hp, and completed', (expect)=> {
     expect.equal(user.hp, 60);
     expect.equal(user.currency, 45);
     expect.equal(user.completed[data], true);
+
+});
+
+test('loadProfile should display user name, currency, hp and avatar picture', (expect)=> {
 
 });

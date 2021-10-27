@@ -31,3 +31,20 @@ export function scoreQuest(choice, data, user) {
     user.currency += choice.currency;
     user.completed[data] = true;
 }
+
+export function loadProfile() {
+    const user = getUser();
+    console.log(user);
+
+    const name = document.getElementById('user-name');
+    name.textContent = user.name;
+
+    const image = document.getElementById('user-image');
+    image.src = `../assets/${user.character}.jpg`;
+
+    const currency = document.getElementById('user-currency');
+    currency.textContent = user.currency;
+
+    const hp = document.getElementById('user-hp');
+    hp.textContent = user.hp;
+}

@@ -1,5 +1,5 @@
 import quests from '../Data/Quest-data.js';
-import { findById, getUser, setUser, scoreQuest } from '../Utils.js';
+import { findById, getUser, setUser, scoreQuest, loadProfile } from '../Utils.js';
 
 const params = new URLSearchParams(window.location.search);
 
@@ -69,5 +69,8 @@ choices.addEventListener('submit', (e)=> {
 
     questResults.append(resultP, backLink);
 
+    loadProfile();
     // questDescription.classList.remove('hidden');
 });
+
+loadProfile();

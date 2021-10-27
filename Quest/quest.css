@@ -1,0 +1,14 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+img {
+    width: 800px;
+}
+
+.hidden {
+    display: ;
+}

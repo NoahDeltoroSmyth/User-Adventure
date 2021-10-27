@@ -1,4 +1,5 @@
 import quests from '../Data/Quest-data.js';
+import { loadProfile } from '../Utils.js';
 
 const questLinks = document.getElementById('quest-links');
 
@@ -8,3 +9,5 @@ for (let quest of quests) {
     a.textContent = quest.title;
     questLinks.appendChild(a);
 }
+
+loadProfile();
