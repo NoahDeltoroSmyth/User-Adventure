@@ -10,5 +10,11 @@ img {
 }
 
 .hidden {
-    display: ;
+    display: none;
 }
+
+#user-image {
+    width: 100px;
+    border-radius: 50px;
+}
+

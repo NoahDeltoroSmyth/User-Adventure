@@ -48,7 +48,7 @@ const burgerWorld = {
             You go into work, but you quickly realize it was never worth it to begin with. The customers are rude
             and you don't care to be there at all. You also were never given the extra 10 dollars and instead of a meal
             you received a gift card to a book store with 1 dollar on it.`,
-        hp: -10,
+        hp: -30,
         currency: -10
     }, {
         id: 'stay-home',
@@ -81,7 +81,7 @@ const school = {
         result: `
             You attempt to run past him, but he surprisingly has laser like reflexes and catches you. In his voice, he says
             you have to go to detention.`,
-        hp: -20,
+        hp: -40,
         currency: -5
     }, {
         id: 'stay-at-school',

@@ -1,3 +1,5 @@
+import quests from './Data/Quest-data.js';
+
 export function generateUser(formData) {
     return {
         completed: {},
@@ -47,4 +49,13 @@ export function loadProfile() {
 
     const hp = document.getElementById('user-hp');
     hp.textContent = user.hp;
+}
+
+export function hasCompletedAllQuests(user) {
+    for (let quest of quests) {
+        if (!user.completed[quest.id]){
+            return false;
+        } 
+    }
+    return true;
 }

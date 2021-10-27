@@ -2,14 +2,29 @@ body {
     background-image: url(../assets/for-map.jpeg);
     background-size: 80%;
     background-repeat: no-repeat;
-    background-position: top;
-    background-repeat: repeat-y;
+    background-position: center;
+    /* background-repeat: repeat-y; */
+    display: flex;
+    flex-direction: column;
     
 }
 
-h1 {
+/* .header-info {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    position: absolute;
+    right: 20px;
+
+} */
+
+#user-image {
+    width: 100px;
+    border-radius: 50px;
+}
+
+.header {
+    display: flex;
+    
 }
 
 #quest-links {

@@ -1,6 +1,6 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
-import { generateUser, setUser, getUser, findById, scoreQuest, loadProfile } from '../Utils.js';
+import { generateUser, setUser, getUser, findById, scoreQuest, hasCompletedAllQuests } from '../Utils.js';
 import quests from '../Data/Quest-data.js';
 const test = QUnit.test;
 
@@ -148,6 +148,23 @@ test('scoreQuest should update users currency, hp, and completed', (expect)=> {
 
 });
 
-test('loadProfile should display user name, currency, hp and avatar picture', (expect)=> {
+test('hasCompletedAllQuests should return true if user completes all quests', (expect)=> {
 
+    const user = {
+        completed: { convenienceStore: true, school: true, burgerWorld: true }
+    };
+
+    const actual = hasCompletedAllQuests(user);
+
+    expect.equal(actual, true);
+});
+
+test('hasCompletedAllQuests should return false if user does not complete all quests', (expect)=> {
+    const user = {
+        completed: { convenienceStore: true, school: true }
+    };
+
+    const actual = hasCompletedAllQuests(user);
+    
+    expect.equal(actual, false);
 });

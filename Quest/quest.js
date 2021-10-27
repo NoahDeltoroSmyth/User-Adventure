@@ -69,8 +69,9 @@ choices.addEventListener('submit', (e)=> {
 
     questResults.append(resultP, backLink);
 
+    questResults.classList.remove('hidden');
+
     loadProfile();
-    // questDescription.classList.remove('hidden');
 });
 
 loadProfile();
