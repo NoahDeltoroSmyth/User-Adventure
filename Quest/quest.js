@@ -1,5 +1,5 @@
 import quests from '../Data/Quest-data.js';
-import { findById, getUser, setUser } from '../Utils.js';
+import { findById, getUser, setUser, scoreQuest } from '../Utils.js';
 
 const params = new URLSearchParams(window.location.search);
 
@@ -12,7 +12,7 @@ title.textContent = data.title;
 const image = document.getElementById('img');
 image.src = data.image;
 
-const description = document.getElementById('description');
+const description = document.getElementById('quest-description');
 description.textContent = data.description;
 
 const choices = document.getElementById('choices');
@@ -47,8 +47,27 @@ choices.addEventListener('submit', (e)=> {
     console.log(choice, 'choice');
 
     const user = getUser();
-    console.log(user, 'user');
+    console.log(user, 'getuser');
+
+    scoreQuest(choice, data.id, user);
+    console.log(choice, data, user, 'scorequest');
     
     setUser(user);
-    console.log(user);
+    console.log(user, 'setuser');
+
+    const questDescription = document.getElementById('quest-description');
+    questDescription.classList.add('hidden');
+
+    const questResults = document.getElementById('results');
+
+    const resultP = document.createElement('p');
+    resultP.textContent = choice.result;
+
+    const backLink = document.createElement('a');
+    backLink.href = '../map';
+    backLink.textContent = 'Back to the Map!';
+
+    questResults.append(resultP, backLink);
+
+    // questDescription.classList.remove('hidden');
 });

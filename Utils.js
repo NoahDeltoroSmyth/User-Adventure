@@ -26,8 +26,8 @@ export function findById(items, id) {
     }
 }
 
-export function scoreQuest(choice, questId, user) {
+export function scoreQuest(choice, data, user) {
     user.hp += choice.hp;
     user.currency += choice.currency;
-    user.completed[questId] = true;
+    user.completed[data] = true;
 }

@@ -136,14 +136,14 @@ test('scoreQuest should update users gold, hp, and completed', (expect)=> {
         currency: -5
     };
 
-    const questId = 'convenience-store';
+    const data = 'convenience-store';
 
     //act
-    scoreQuest(choice, questId, user);
+    scoreQuest(choice, data, user);
 
     //expect
     expect.equal(user.hp, 60);
     expect.equal(user.currency, 45);
-    expect.equal(user.completed[questId], true);
+    expect.equal(user.completed[data], true);
 
 });
