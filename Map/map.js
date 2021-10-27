@@ -5,27 +5,31 @@ const questLinks = document.getElementById('quest-links');
 
 const user = getUser();
 
+loadProfile();
+
 if (user.hp <= 0 || hasCompletedAllQuests(user)){
     window.location.replace('../Gameover');
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-for (let quest of quests) {
+function displayLink(quest) {
     const a = document.createElement('a');
     a.href = `../Quest/?id=${quest.id}`;
     a.textContent = quest.title;
+    a.classList.add('quest');
     questLinks.appendChild(a);
 }
 
-loadProfile();
+function displaySpan(quest) {
+    const span = document.createElement('span');
+    span.textContent = quest.title;
+    span.classList.add('quest');
+    questLinks.appendChild(span);
+}
+for (let quest of quests){
+    // if user has completed the quest
+    if (user.completed[quest.id]){
+        displaySpan(quest);
+    } else {
+        displayLink(quest);
+    }
+}

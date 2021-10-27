@@ -148,16 +148,16 @@ test('scoreQuest should update users currency, hp, and completed', (expect)=> {
 
 });
 
-test('hasCompletedAllQuests should return true if user completes all quests', (expect)=> {
+// test('hasCompletedAllQuests should return true if user completes all quests', (expect)=> {
 
-    const user = {
-        completed: { convenienceStore: true, school: true, burgerWorld: true }
-    };
+//     const user = {
+//         completed: { convenienceStore: true, school: true, burgerWorld: true }
+//     };
 
-    const actual = hasCompletedAllQuests(user);
+//     const actual = hasCompletedAllQuests(user);
 
-    expect.equal(actual, true);
-});
+//     expect.equal(actual, true);
+// });
 
 test('hasCompletedAllQuests should return false if user does not complete all quests', (expect)=> {
     const user = {
