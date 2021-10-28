@@ -4,15 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./map.css">
     <title>Document</title>
 </head>
 <body>
-
-    <h1>Uhhh, where do you want to go?</h1>
-
+    <h1 class="header">Uhhh, where do you want to go?</h1>
+    <header>
+        <div class="header-info">
+            <img id="user-image">
+            <div class="user-info">
+                <span id="user-name"></span>
+                <p>Currency: <span id="user-currency"></span></p>
+                <p>HP: <span id="user-hp"></span></p>
+            </div>
+        </div>
+    </header>
     <section id="quest-links"></section>
-
-    <img src="../assets/for-map.jpeg" alt="">
     
     <script type="module" src="./map.js"></script>
 </body>
