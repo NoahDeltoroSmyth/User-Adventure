@@ -89,7 +89,7 @@ test('findById should locate id', (expect) => {
             result: `
             Todd throws them on the ground because he didn't even want them in the first place. 
             He also still ends up beating you up and peels out on the nachos leaving you in a big plume of smoke.`,
-            hp: -40,
+            hp: -50,
             currency: -5
         }, {
             id: 'fight-back',
