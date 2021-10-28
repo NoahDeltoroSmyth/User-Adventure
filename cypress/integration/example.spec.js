@@ -1,7 +1,7 @@
 
 describe('Example Test', ()=>{
     before(()=>{
-        cy.visit('/');
+        cy.visit('/Home');
     });
 
     describe('HTML elements', ()=>{   
