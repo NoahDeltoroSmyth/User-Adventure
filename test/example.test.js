@@ -1,6 +1,6 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
-import { generateUser, setUser, getUser, findById, scoreQuest, hasCompletedAllQuests } from '../Utils.js';
+import { generateUser, setUser, getUser, findById } from '../Utils.js';
 import quests from '../Data/Quest-data.js';
 const test = QUnit.test;
 
@@ -89,7 +89,7 @@ test('findById should locate id', (expect) => {
             result: `
             Todd throws them on the ground because he didn't even want them in the first place. 
             He also still ends up beating you up and peels out on the nachos leaving you in a big plume of smoke.`,
-            hp: -50,
+            hp: -40,
             currency: -5
         }, {
             id: 'fight-back',
@@ -114,57 +114,4 @@ test('findById should locate id', (expect) => {
 
     expect.deepEqual(actual, expected);
 
-});
-
-test('scoreQuest should update users currency, hp, and completed', (expect)=> {
-    //setup
-    const user = {
-        completed: {},
-        character: 'Beavis',
-        name: 'Noah',
-        hp: 100,
-        currency: 50,
-    };
-
-    const choice = {
-        id: 'give-in',
-        description: 'Give the nachos to Todd',
-        result: `
-        Todd throws them on the ground because he didn't even want them in the first place. 
-        He also still ends up beating you up and peels out on the nachos leaving you in a big plume of smoke.`,
-        hp: -40,
-        currency: -5
-    };
-
-    const data = 'convenience-store';
-
-    //act
-    scoreQuest(choice, data, user);
-
-    //expect
-    expect.equal(user.hp, 60);
-    expect.equal(user.currency, 45);
-    expect.equal(user.completed[data], true);
-
-});
-
-// test('hasCompletedAllQuests should return true if user completes all quests', (expect)=> {
-
-//     const user = {
-//         completed: { convenienceStore: true, school: true, burgerWorld: true }
-//     };
-
-//     const actual = hasCompletedAllQuests(user);
-
-//     expect.equal(actual, true);
-// });
-
-test('hasCompletedAllQuests should return false if user does not complete all quests', (expect)=> {
-    const user = {
-        completed: { convenienceStore: true, school: true }
-    };
-
-    const actual = hasCompletedAllQuests(user);
-    
-    expect.equal(actual, false);
 });
