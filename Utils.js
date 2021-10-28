@@ -59,3 +59,7 @@ export function hasCompletedAllQuests(user) {
     }
     return true;
 }
+
+export function isDead(user) {
+    return user.hp <= 0;
+}

@@ -1,5 +1,5 @@
 import quests from '../Data/Quest-data.js';
-import { getUser, loadProfile, hasCompletedAllQuests } from '../Utils.js';
+import { getUser, loadProfile, hasCompletedAllQuests, isDead } from '../Utils.js';
 
 const questLinks = document.getElementById('quest-links');
 
@@ -7,7 +7,11 @@ const user = getUser();
 
 loadProfile();
 
-if (user.hp <= 0 || hasCompletedAllQuests(user)){
+if (hasCompletedAllQuests(user)){
+    window.location.replace('../win');
+}
+
+if (isDead(user)){
     window.location.replace('../Gameover');
 }
 
