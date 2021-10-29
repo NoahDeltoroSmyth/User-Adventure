@@ -120,7 +120,7 @@ test('scoreQuest should update users currency, hp, and completed', (expect)=> {
     //setup
     const user = {
         completed: {},
-        character: 'Beavis',
+        character: 'beavis',
         name: 'Noah',
         hp: 100,
         currency: 50,
