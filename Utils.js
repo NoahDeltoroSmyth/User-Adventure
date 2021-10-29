@@ -42,6 +42,7 @@ export function loadProfile() {
     name.textContent = user.name;
 
     const image = document.getElementById('user-image');
+    console.log(image);
     image.src = `../assets/${user.character}.jpg`;
 
     const currency = document.getElementById('user-currency');
