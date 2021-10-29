@@ -2,6 +2,7 @@ const convenienceStore = {
     id: 'convenience-store',
     title: 'Loitering at the store',
     image: '../assets/convenience-store-quest.jpeg',
+    audio: 'theme.mp3',
     description: `
         There you are chillin' outside the convenience store and Todd shows up in his car. 
         He sees you eating some nachos and orders you to give them to him or he will beat you up. 
