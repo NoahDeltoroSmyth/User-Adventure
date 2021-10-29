@@ -8,7 +8,9 @@ const data = findById(quests, params.get('id'));
 //console.log(data, 'data');
 
 const audio = document.getElementById('audio');
-audio.src = '../assets/' + data.audio;
+if (data.audio) {
+    audio.src = '../assets/' + data.audio; 
+}
 
 const title = document.getElementById('title');
 title.textContent = data.title;

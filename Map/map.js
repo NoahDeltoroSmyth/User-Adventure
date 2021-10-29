@@ -20,6 +20,8 @@ function displayLink(quest) {
     a.href = `../Quest/?id=${quest.id}`;
     a.textContent = quest.title;
     a.classList.add('quest');
+    a.style.top = quest.map.top;
+    a.style.left = quest.map.left;
     questLinks.appendChild(a);
 }
 
@@ -27,6 +29,8 @@ function displaySpan(quest) {
     const span = document.createElement('span');
     span.textContent = quest.title;
     span.classList.add('quest');
+    span.style.top = quest.map.top;
+    span.style.left = quest.map.left;
     questLinks.appendChild(span);
 }
 for (let quest of quests){
