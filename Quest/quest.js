@@ -64,7 +64,7 @@ choices.addEventListener('submit', (e)=> {
     resultP.textContent = choice.result;
 
     const backLink = document.createElement('a');
-    backLink.href = '../map';
+    backLink.href = '../Map';
     backLink.textContent = 'Back to the Map!';
 
     questResults.append(resultP, backLink);
