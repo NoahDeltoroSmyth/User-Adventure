@@ -1,7 +1,12 @@
 const convenienceStore = {
     id: 'convenience-store',
     title: 'Loitering at the store',
+    map: {
+        top:'45%',
+        left:'23%',
+    },
     image: '../assets/convenience-store-quest.jpeg',
+    audio: '',
     description: `
         There you are chillin' outside the convenience store and Todd shows up in his car. 
         He sees you eating some nachos and orders you to give them to him or he will beat you up. 
@@ -36,7 +41,12 @@ const convenienceStore = {
 const burgerWorld = {
     id: 'burger-world',
     title: 'Burger World',
+    map: {
+        top:'80%',
+        left:'22%',
+    },
     image: '../assets/burger-world-quest.jpeg',
+    audio: '',
     description: `
         You get a call from your manager and he says that they are slammed and need extra help on the floor.
         He asks if you can come in right now for an extra 10 dollars and a free meal, but this means you would have
@@ -71,7 +81,12 @@ const burgerWorld = {
 const school = {
     id: 'school',
     title: 'School Day',
+    map: {
+        top:'25%',
+        left:'55%',
+    },
     image: '../assets/school-quest.jpeg',
+    audio: '',
     description: `
         You are at school, but you hate that you have to be there. You envision a plan to get out of there, but principal McVicker
         is guarding the front doors. What should you do?`,

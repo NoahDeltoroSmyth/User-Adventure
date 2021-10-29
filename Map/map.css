@@ -1,25 +1,29 @@
 body {
-    background-image: url(../assets/for-map.jpeg);
-    background-size: 80%;
+    /* background-image: url(../assets/bbmap1.png); */
+    /* background-size: 60%;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center; */
     /* background-repeat: repeat-y; */
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
     
 }
 
-/* .header-info {
+.header-info {
     display: flex;
     flex-direction: row;
     position: absolute;
-    right: 20px;
+    right: 30px;
+    top: 10px;
+    
 
-} */
+}
 
 #user-image {
-    width: 100px;
+    height: 100px;
     border-radius: 50px;
+    margin-right: 15px;
+    border: red 2px solid;
 }
 
 .header {
@@ -30,4 +34,18 @@ body {
 #quest-links {
     display: flex;
     flex-direction: column;
+    background-image: url(../assets/bbmap1.png);
+    position: relative;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: auto;
+    background-position: center;
+}
+
+.quest {
+    position: absolute;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
 }
