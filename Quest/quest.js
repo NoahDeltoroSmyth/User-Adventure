@@ -3,8 +3,12 @@ import { findById, getUser, setUser, scoreQuest, loadProfile } from '../Utils.js
 
 const params = new URLSearchParams(window.location.search);
 
+
 const data = findById(quests, params.get('id'));
-console.log(data, 'data');
+//console.log(data, 'data');
+
+const audio = document.getElementById('audio');
+audio.src = '../assets/' + data.audio;
 
 const title = document.getElementById('title');
 title.textContent = data.title;
